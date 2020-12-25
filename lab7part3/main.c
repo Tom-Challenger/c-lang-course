@@ -11,11 +11,11 @@ int main() {
 	double divResult = (rightSide - leftSide) / step;
 	double remResult = fmod((rightSide - leftSide), step);
 	// Get integer part
-	int pointsCount = ceil(divResult);
+	int pointsCount = (int) divResult;
 	// !!
-	if (remResult > 0) {
-		pointsCount++;
-	}
+//	if (remResult > 0) {
+//		pointsCount++;
+//	}
 
 	// Create array
 	double x = leftSide;
@@ -46,7 +46,7 @@ int main() {
 
 		// Debug
 		printf("i[%d] y[%f]= %f\n", i, x, y[i]);
-		printf("-----------------------------");
+//		printf("-----------------------------\n");
 
 		// Next step
 		x += 0.3;
